@@ -44,6 +44,7 @@ class MainPageHandler(webapp2.RequestHandler):
         
         messages = db.Query(datamodel.Message).filter('courseName =', courseName).filter('lectureName =', lectureName).order('messageTime').fetch(limit=None)
         
+        // now could get messages list 05/30/2015
         logging.error(messages)
         
          
