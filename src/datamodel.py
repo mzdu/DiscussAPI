@@ -2,8 +2,6 @@
 
 from google.appengine.ext import db
 
-class Message(db.Model):
-    
 #     Data Model of Message is:
 #     {
 #         "Course1":
@@ -29,8 +27,10 @@ class Message(db.Model):
 #                     ]
 #         }
 #     }
-    courseName = db.StringProperty()
+
+class Message(db.Model):
+
+    messageBody = db.TextProperty()
+    messageTime = db.IntegerProperty()
     lectureName = db.StringProperty()
-    url = db.StringProperty()
-    messageBody = db.StringProperty()
-    messageDateTime = db.DateTimeProperty()
+    courseName = db.StringProperty()
